@@ -8,13 +8,13 @@ class TreeSelect extends StatefulWidget {
   // 左侧选中项的索引
   final int mainActiveIndex;
   // 右侧选中项的 id
-  final List<int> activeId;
+  final List<String> activeId;
   // 高度
   final double height;
   // 右侧项最大选中个数
   final int max;
   // 左侧选中值改变时触发
-  final Function(List<int> list) onChange;
+  final Function(List<String> list) onChange;
 
   TreeSelect(
       {Key key,
@@ -32,7 +32,7 @@ class TreeSelect extends StatefulWidget {
 
 class _TreeSelect extends State<TreeSelect> {
   int _mainActiveIndex;
-  List<int> _activeId;
+  List<String> _activeId;
 
   @override
   void initState() {
@@ -132,7 +132,7 @@ class _TreeSelect extends State<TreeSelect> {
 
 class TreeItem {
   final String text;
-  final int id;
+  final String id;
   final bool disabled;
 
   TreeItem({@required this.text, this.id, this.disabled: false});

@@ -53,6 +53,7 @@ class _Sidebar extends State<Sidebar> {
           //TODO:解决badge的value改变时会重新渲染
           child: (item.dot || item.info != null)
               ? Badge(
+                  dot: item.dot ?? false,
                   value: item.info,
                   child: text,
                 )
